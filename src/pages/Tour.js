@@ -1,5 +1,12 @@
-import { Container, Typography, Box } from "@mui/material";
+import {
+  Container,
+  Typography,
+  Box,
+  Paper,
+  BottomNavigation,
+} from "@mui/material";
 import AccordionCom from "../components/AccordionCom";
+import BasicModal from "../components/BasicModal";
 import ImageCollage from "../components/ImageCollage";
 
 const Tour = () => {
@@ -32,9 +39,17 @@ const Tour = () => {
           Frequently asked questions
         </Typography>
       </Box>
-      <Box>
+      <Box marginBottom={10}>
         <AccordionCom />
       </Box>
+      <Paper
+        sx={{ position: "fixed", bottom: 0, left: 0, right: 0 }}
+        elevation={3}
+      >
+        <BottomNavigation>
+          <BasicModal />
+        </BottomNavigation>
+      </Paper>
     </Container>
   );
 };
